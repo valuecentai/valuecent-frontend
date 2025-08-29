@@ -1,0 +1,18 @@
+{
+  "short_name": "VALUECENT",
+  "name": "VALUECENT | Intelligent Learning",
+  "description": "VALUECENT: The Future of Professional Learning.",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "type": "image/svg+xml",
+      "sizes": "192x192 512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#F0F2F5",
+  "background_color": "#f1f5f9"
+}

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VALUECENT | Intelligent Learning</title>
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- Theme Color for PWA -->
+    <meta name="theme-color" content="#F9FAFB" />
+
+    <!-- Icons for PWA -->
+    <link rel="apple-touch-icon" href="/icon.svg" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        /* Light Theme Color Palette */
+        --bg: #F9FAFB; /* gray-50 */
+        --fg: #020617; /* slate-950 */
+        --fg-muted: #475569; /* slate-600 */
+        --fg-subtle: #64748b; /* slate-500 */
+        --fg-disabled: #94a3b8; /* slate-400 */
+        
+        --card: #ffffff;
+        --card-fg: #0f172a;
+        
+        --primary: #2563eb; /* blue-600 */
+        --primary-fg: #ffffff;
+        
+        --secondary-bg: #f1f5f9; /* slate-100 */
+        --secondary-fg: #0f172a;
+        
+        --border: #e2e8f0; /* slate-200 */
+        --ring: #3b82f6; /* blue-500 */
+
+        --bg-disabled: #e2e8f0; /* slate-200 */
+
+        --success-fg: #16a34a; /* green-600 */
+        --success-bg: #f0fdf4; /* green-50 */
+        
+        /* Gradients & Shadows */
+        --soft-shadow-light: #d9dbe0;
+        --soft-shadow-dark: #ffffff;
+        --brand-gradient: linear-gradient(125deg, #3b82f6, #4f46e5);
+        --featured-gradient: linear-gradient(125deg, #5b21b6, #312e81);
+        --soft-inset-active-gradient: linear-gradient(145deg, #e6e9ed, #ffffff);
+      }
+      :root.dark {
+        /* Dark Theme Color Palette - True Dark */
+        --bg: #121212;
+        --fg: #E5E7EB; /* gray-200 */
+        --fg-muted: #9CA3AF; /* gray-400 */
+        --fg-subtle: #6B7281; /* gray-500 */
+        --fg-disabled: #4B5563; /* gray-600 */
+        
+        --card: #1E1E1E;
+        --card-fg: #E5E7EB;
+        
+        --primary: #60a5fa; /* blue-400 */
+        --primary-fg: #020617;
+        
+        --secondary-bg: #2A2A2A;
+        --secondary-fg: #E5E7EB;
+
+        --border: #374151; /* gray-700 */
+        --ring: #60a5fa; /* blue-400 */
+
+        --bg-disabled: #374151; /* gray-700 */
+
+        --success-fg: #4ade80; /* green-400 */
+        --success-bg: rgba(74, 222, 128, 0.1);
+        
+        /* Gradients & Shadows */
+        --soft-shadow-light: #0d0d0d;
+        --soft-shadow-dark: #171717;
+        --brand-gradient: linear-gradient(125deg, #60a5fa, #818cf8);
+        --featured-gradient: linear-gradient(125deg, #a78bfa, #6366f1);
+        --soft-inset-active-gradient: linear-gradient(145deg, #101010, #141414);
+      }
+      body {
+        background-color: var(--bg);
+        color: var(--fg);
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+      .valuecent-brand-font {
+        font-family: 'Cinzel', serif;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        background: var(--brand-gradient);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: inline-block;
+      }
+      /* Soft UI utility classes */
+      .soft-outset {
+        background: var(--bg);
+        border-radius: 1rem;
+        box-shadow: 5px 5px 10px var(--soft-shadow-light), -5px -5px 10px var(--soft-shadow-dark);
+        transition: all 0.2s ease-in-out;
+      }
+      .soft-outset-hover:hover {
+        box-shadow: 7px 7px 14px var(--soft-shadow-light), -7px -7px 14px var(--soft-shadow-dark);
+        transform: translateY(-2px);
+      }
+      .soft-inset-press:active {
+        box-shadow: inset 3px 3px 6px var(--soft-shadow-light), inset -3px -3px 6px var(--soft-shadow-dark);
+        transform: translateY(1px);
+      }
+      .soft-inset {
+        background: var(--bg);
+        box-shadow: inset 3px 3px 6px var(--soft-shadow-light), inset -3px -3px 6px var(--soft-shadow-dark);
+      }
+      .soft-inset-active {
+        background: var(--soft-inset-active-gradient);
+        box-shadow: inset 3px 3px 6px var(--soft-shadow-light), inset -3px -3px 6px var(--soft-shadow-dark);
+      }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.1.1/",
+    "react": "https://esm.sh/react@^19.1.1",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.1/",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.0.1",
+    "vite": "https://esm.sh/vite@^7.1.3"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="antialiased">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
